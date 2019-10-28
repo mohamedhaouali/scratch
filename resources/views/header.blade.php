@@ -10,10 +10,12 @@
 
     <!-- CSS
 	================================================== -->
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/colors/blue.css">
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    @yield('extra-js')
 
 </head>
 <body>
@@ -74,7 +76,7 @@
 
 						<!-- Trigger -->
 						<div class="header-notifications-trigger">
-							<a href="#"><i class="icon-feather-bell"></i><span>4</span></a>
+							<a href="#"><i class="icon-feather-bell"></i><span>{{ auth()->user()->unreadNotifications->count() }}</span></a>
 						</div>
 
 						<!-- Dropdown -->
@@ -90,45 +92,17 @@
 							<div class="header-notifications-content">
 								<div class="header-notifications-scroll" data-simplebar>
 									<ul>
-										<!-- Notification -->
-										<li class="notifications-not-read">
-											<a href="dashboard-manage-candidates.html">
-												<span class="notification-icon"><i class="icon-material-outline-group"></i></span>
-												<span class="notification-text">
-													<strong>Michael Shannah</strong> applied for a job <span class="color">Full Stack Software Engineer</span>
+                                        @foreach (auth()->user()->unreadNotifications as $unreadNotification)
+                                        <li class="notifications-not-read">
+                                                <span class="notification-text">
+													<a href="{{ route('showFromNotification', ['serviceId' => $unreadNotification->data['serviceId'], 'notification' => $unreadNotification->id]) }}">
+                                                        <strong>{{ $unreadNotification->data['user'] }}</strong><span class="ml-2 mr-2">  a écrit sur votre service </span>
+                                                        <span class="color">{{ $unreadNotification->data['serviceTitle'] }}</span>
+                                                    </a>
 												</span>
-											</a>
-										</li>
 
-										<!-- Notification -->
-										<li>
-											<a href="dashboard-manage-bidders.html">
-												<span class="notification-icon"><i class=" icon-material-outline-gavel"></i></span>
-												<span class="notification-text">
-													<strong>Gilbert Allanis</strong> placed a bid on your <span class="color">iOS App Development</span> project
-												</span>
-											</a>
-										</li>
-
-										<!-- Notification -->
-										<li>
-											<a href="dashboard-manage-jobs.html">
-												<span class="notification-icon"><i class="icon-material-outline-autorenew"></i></span>
-												<span class="notification-text">
-													Your job listing <span class="color">Full Stack PHP Developer</span> is expiring.
-												</span>
-											</a>
-										</li>
-
-										<!-- Notification -->
-										<li>
-											<a href="dashboard-manage-candidates.html">
-												<span class="notification-icon"><i class="icon-material-outline-group"></i></span>
-												<span class="notification-text">
-													<strong>Sindy Forrest</strong> applied for a job <span class="color">Full Stack Software Engineer</span>
-												</span>
-											</a>
-										</li>
+                                        </li>
+                                        @endforeach
 									</ul>
 								</div>
 							</div>
@@ -208,12 +182,12 @@
 					<!-- Messages -->
 					<div class="header-notifications user-menu">
 						<div class="header-notifications-trigger">
-							<a href="#"><div class="user-avatar status-online"><?php 
+							<a href="#"><div class="user-avatar status-online"><?php
 							$user = App\DetailsUsers::where('id_users',Auth::user()->id)->get();
 							foreach ($user as $use){
 								$photo = $use->photo_profil;
 							}
-							
+
 							?><img src="{{asset('images')}}/{{$photo}}" alt=""></div></a>
 						</div>
 

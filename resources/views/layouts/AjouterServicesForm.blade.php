@@ -15,7 +15,7 @@
 	================================================== -->
 	<div class="dashboard-content-container" data-simplebar>
 		<div class="dashboard-content-inner" >
-			
+
 			<!-- Dashboard Headline -->
 			<div class="dashboard-headline">
 				<h3>Publier une offre</h3>
@@ -28,7 +28,7 @@
 					</ul>
 				</nav>
 			</div>
-	
+
             <!-- Row -->
             @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -50,14 +50,14 @@
 						<div class="content with-padding padding-bottom-10">
 							<div class="row">
 
-								<div class="col-xl-4">
+								<div class="col-xl-3">
 									<div class="submit-field">
 										<h5>Titre</h5>
 										<input type="text" class="with-border" name="titre">
 									</div>
 								</div>
 
-								<div class="col-xl-4">
+								<div class="col-xl-3">
 									<div class="submit-field">
 										<h5>Type de l'offre</h5>
                                         <select class="selectpicker with-border" data-size="7" title="Type de l'offre" name="type">
@@ -67,6 +67,22 @@
 										</select>
 									</div>
 								</div>
+
+                                <div class="col-xl-3">
+                                    <div class="submit-field">
+                                        <h5>Type du service </h5>
+                                        <select class="selectpicker with-border" data-size="7" title="Type du service" name="servicepropose" onchange="list_sousservice(this.value)">
+                                            @foreach( $services as $service)
+                                            <option value="{{$service->id}}">{{$service->nomservice}}</option>
+                                            @endforeach
+
+                                        </select>
+                                    </div>
+                                </div>
+
+<div class="col-xl-4" id="sousservice" style="display: none;">
+
+</div>
 
 								<div class="col-xl-4">
 									<div class="submit-field">
@@ -80,7 +96,7 @@
 									</div>
 								</div>
 
-							
+
 
 								<div class="col-xl-6">
 									<div class="submit-field">
@@ -111,7 +127,7 @@
 												<a class="keyword-input-button ripple-effect" onClick="duplicer()"><i class="icon-material-outline-add"></i></a>
                                             </div>
                                             <div id="newtags">
-												
+
 											</div>
 											<div class="keywords-list"><!-- keywords go here --></div>
 											<div class="clearfix"></div>
@@ -204,7 +220,7 @@
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 <script>
 // Snackbar for user status switcher
-$('#snackbar-user-status label').click(function() { 
+$('#snackbar-user-status label').click(function() {
 	Snackbar.show({
 		text: 'Your status has been changed!',
 		pos: 'bottom-center',
@@ -213,8 +229,8 @@ $('#snackbar-user-status label').click(function() {
 		duration: 3000,
 		textColor: '#fff',
 		backgroundColor: '#383838'
-	}); 
-}); 
+	});
+});
 </script>
 
 <!-- Chart.js // documentation: http://www.chartjs.org/docs/latest/ -->
@@ -270,7 +286,7 @@ $('#snackbar-user-status label').click(function() {
 	            	},
 				}],
 				xAxes: [{
-					scaleLabel: { display: false },  
+					scaleLabel: { display: false },
 					gridLines:  { display: false },
 				}],
 			},
@@ -306,7 +322,7 @@ $('#snackbar-user-status label').click(function() {
 		 var autocomplete = new google.maps.places.Autocomplete(input, options);
 
 		if ($('.submit-field')[0]) {
-		    setTimeout(function(){ 
+		    setTimeout(function(){
 		        $(".pac-container").prependTo("#autocomplete-container");
 		    }, 300);
 		}
@@ -323,6 +339,83 @@ $('#snackbar-user-status label').click(function() {
         document.getElementById("newtags").appendChild(clone);
 }
 </script>
+
+
+
+
+
+********
+
+<script>
+
+    let getHttpRequest = function () {
+        let httpRequest = false;
+
+        if (window.XMLHttpRequest) { // Mozilla, Safari,...
+            httpRequest = new XMLHttpRequest();
+            if (httpRequest.overrideMimeType) {
+                httpRequest.overrideMimeType('text/xml');
+            }
+        }
+        else if (window.ActiveXObject) { // IE
+            try {
+                httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e) {
+                try {
+                    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch (e) {}
+            }
+        }
+
+        if (!httpRequest) {
+            alert('Abandon  Impossible de créer une instance XMLHTTP');
+            return false;
+        }
+
+        return httpRequest;
+    }
+
+    function list_sousservice(str) {
+        document.getElementById("sousservice").style.display="inline";
+        var xhttp;
+        let httpRequest= getHttpRequest();
+
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let results=JSON.parse(this.responseText);
+                console.log(results);
+                var options='<div class="submit-field"><h5>Domaine</h5><select name="sousservice" >';
+
+                for(var i=0; i<results.length;i++){
+
+                    options=options + '<option value="'+results[i].id+'">'+results[i].nomsousservices+"</option>" ;
+                }
+
+                options= options + '</select></div>';
+console.log(options);
+                document.getElementById("sousservice").innerHTML = options;
+
+
+
+            }
+
+
+        };
+
+        xhttp.open("GET", "http://localhost:84/scratch/public/Sousservices/"+str, true);
+        xhttp.send();
+
+    }
+
+</script>
+
+
+
+
+
 
 </body>
 </html>

@@ -32,8 +32,10 @@ Route::get('AjouterServicesForm','ServicesController@AjouterServicesForm')->name
 Route::post('AjouterServicesAction','ServicesController@AjouterServicesAction')->name('AjouterServicesAction');
 Route::get('rechercheview','ServicesController@viewrecherche')->name('rechercheview')->middleware('App\Http\Middleware\Auth');;
 Route::get('afficher','ServicesController@afficher')->name('afficher');
-Route::get('/ser/{prix_min}/{prix_max}/{titre}/{dt}/{localisation}','ServicesController@afficher')->name('ser');
+Route::get('/ser/{prix_min}/{prix_max}/{titre}/{dt}/{localisation}','ServicesController@filtrationServices')->name('ser');
+Route::get('Sousservices/{id}','ServicesController@Sousservices')->name('Sousservices');
 Route::get('/','ServicesController@index')->name('/');
+
 
 /****linkedin*****/
 
@@ -43,3 +45,20 @@ Route::get('{provider}/callback', 'Auth\LoginController@handleProviderCallback')
 /*****detailservice****/
 
 Route::get('ShowDetailService,{id}', 'ServicesController@ShowDetailService')->name('ShowDetailService');
+Route::get('Detailfreelancer,{id}', 'ServicesController@Detailfreelancer')->name('Detailfreelancer');
+Route::get('facebook', function(){
+    return view('facebook');
+});
+
+/*****chat laravel****/
+
+Route::get('/message/{id}', 'HomeController@getMessage')->name('message');
+Route::post('message', 'HomeController@sendMessage');
+
+
+/************* Commentaires *******/
+Route::post('AjoutCommentaire/{services}','CommentController@AjoutCommentaire')->name('AjoutCommentaire');
+Route::post('RepondreCommentaire/{comment}','CommentController@RepondreCommentaire')->name('RepondreCommentaire');
+Route::get('showFromNotification/{service}/{notification}', 'CommentController@showFromNotification')->name('showFromNotification');
+
+

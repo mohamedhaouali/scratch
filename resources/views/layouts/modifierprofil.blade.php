@@ -128,34 +128,70 @@
 								
                             </div>
                             <div class="row">
-								<div class="col-xl-4">
+								<div class="col-xl-3">
 									<div class="submit-field">
 										<h5>Ville</h5>
 										<input type="text" class="with-border"  name="ville" @if ($detail != null) value="{{$detail->ville}}"  @endif">
 									</div>
 								</div>
 
-								<div class="col-xl-4">
+								<div class="col-xl-3">
 									<div class="submit-field">
 										<h5>Adresse</h5>
 										<input type="text" class="with-border"  name="adress" @if ($detail != null) value="{{$detail->adress}}"  @endif">
 									</div>
 								</div>
 
-								<div class="col-xl-4">
+								<div class="col-xl-3">
 									<div class="submit-field">
 										<h5>Code postal</h5>
 										<input type="text" class="with-border"  name="cp" @if ($detail != null) value="{{$detail->cp}}"  @endif">
 									</div>
 								</div>
+								<div class="col-xl-3">
+									<div class="submit-field">
+										<h5>Poste</h5>
+										<input type="text" class="with-border"  name="poste" @if ($detail != null) value="{{$detail->poste}}"  @endif">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+						
+							<div class="col-xl-4">
+									<div class="submit-field">
+										<h5>Type de l'offre</h5>
+                                        <select class="form-control form-control-lg" name="typeinfluencer">
+											<option @if($detail->typeinfluencer == "facebook" ) selected @endif value="facebook">Facebook</option>
+											<option @if($detail->typeinfluencer == "instagram" ) selected @endif value="instagram">Instagram</option>
+											<option @if($detail->typeinfluencer == "deux" ) selected @endif value="deux">Les Deux</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="col-xl-4">
+									<div class="submit-field">
+										<h5>URL Facebook</h5>
+										<input type="text" class="with-border"  placeholder="https://www.facebook.com/exemple" name="urlfb" @if ($detail != null) value="{{$detail->urlfb}}"  @endif">
+									</div>
+								</div>
+
+								<div class="col-xl-4">
+									<div class="submit-field">
+										<h5>URL Instagram</h5>
+										<input type="text" class="with-border" placeholder="https://www.instagram.com/exemple"  name="urlinstagram" @if ($detail != null) value="{{$detail->urlinstagram}}"  @endif">
+									</div>
+								</div>
+							</div>
+							<div>
                                 <div class="col-xl-12">
 										<div class="submit-field">
 											<h5>Présentez-vous</h5> 
-											<textarea cols="30" rows="5" class="with-border"  name="presentation" @if ($detail != null) value="{{$detail->presentation}}"  @endif"></textarea>
+											<textarea cols="30" rows="5" class="with-border"  name="presentation" >@if ($detail != null) {{$detail->presentation}}  @endif"</textarea>
 										</div>
 								</div>
-								
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -169,6 +205,8 @@
 				</div>
 </form>
 			</div>
+			<div class="col-md-4">
+        </div>
 			<!-- Row / End -->
 
 			<!-- Footer -->
@@ -213,9 +251,9 @@
 </div>
 <!-- Wrapper / End -->
 
-
 <!-- Scripts
 ================================================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery-migrate-3.1.0.min.js"></script>
 <script src="js/mmenu.min.js"></script>
@@ -229,6 +267,10 @@
 <script src="js/magnific-popup.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/custom.js"></script>
+
+
+
+
 
 <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
 <script>

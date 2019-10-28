@@ -15,15 +15,19 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('id_user')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->string('titre')->nullable();
             $table->string('type')->nullable();
             $table->string('localisation')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->integer('salaire_min')->nullable();
             $table->integer('salaire_max')->nullable();
             $table->string('document')->nullable();
+            $table->string('sous_services')->nullable();
+            $table->string('noms_services')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

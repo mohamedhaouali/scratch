@@ -23,6 +23,10 @@ class CreateDetailsUsersTable extends Migration
             $table->string('ville')->nullable();
             $table->string('adress')->nullable();
             $table->integer('cp')->nullable();
+            $table->string('poste')->nullable();
+            $table->string('typeinfluencer')->nullable();
+            $table->string('urlfb')->nullable();
+            $table->string('urlinstagram')->nullable();
             $table->string('presentation')->nullable();
             $table->timestamps();
         });

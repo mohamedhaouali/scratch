@@ -66,12 +66,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-    
+
         $token = Str::random(60);
         $user = new User();
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->password = Hash::make($data['password']);
+        $user->avatar = "https://via.placeholder.com/150";
         $user->token = $token;
         $user->etat = "non verifier";
         $user->save();
@@ -85,6 +86,10 @@ class RegisterController extends Controller
         $detail->ville = null;
         $detail->adress = null;
         $detail->cp = null;
+        $detail->poste = null;
+        $detail->typeinfluencer = null;
+        $detail->urlfb = null;
+        $detail->urlinstagram = null;
         $detail->presentation = null;
         $detail->save();
         $arrays[] =  ($user->token);
@@ -96,6 +101,6 @@ class RegisterController extends Controller
         });
 
         return $user;
-        
+
     }
 }

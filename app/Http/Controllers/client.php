@@ -33,6 +33,10 @@ class client extends Controller
         $detail->ville = $request->ville;
         $detail->adress = $request->adress;
         $detail->cp = $request->cp;
+        $detail->poste = $request->poste;
+        $detail->typeinfluencer = $request->typeinfluencer;
+        $detail->urlfb = $request->urlfb;
+        $detail->urlinstagram = $request->urlinstagram;
         $detail->presentation = $request->presentation;
         $detail->save();
         return back()->with('status','Modification términer avec succées');

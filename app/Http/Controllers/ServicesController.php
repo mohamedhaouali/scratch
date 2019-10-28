@@ -8,6 +8,8 @@ use App\Mots;
 use Auth;
 use App\DetailsUsers;
 use App\User;
+use App\sousservices;
+use App\servicesproposes;
 
 class ServicesController extends Controller
 {
@@ -19,14 +21,17 @@ class ServicesController extends Controller
     }
 
     function viewrecherche(){
-        return view('layouts/rechercheview');
+        $all=Services::OrderBy('created_at','DESC')->paginate(4);
+        $DetailsUsers=DetailsUsers::all();
+        return view('layouts/rechercheview',compact('all','DetailsUsers'));
     }
 
     function afficher(Request $request){
         return $request;
     }
     function AjouterServicesForm(){
-        return view('layouts/AjouterServicesForm');
+        $servicepropose = servicesproposes::all();
+        return view('layouts/AjouterServicesForm')->with('services', $servicepropose);
     }
 
     function AjouterServicesAction(Request $request){
@@ -37,13 +42,15 @@ class ServicesController extends Controller
        }
         $tab = count($request->tags);
         $service = new Services;
-        $service->id_user = Auth::user()->id;
+        $service->user_id = Auth::user()->id;
         $service->titre = $request->titre;
         $service->type = $request->type;
         $service->localisation = $request->localisation;
         $service->salaire_min = $request->salaire_min;
         $service->salaire_max = $request->salaire_max;
         $service->description = $request->description;
+        $service->sous_services = $request->sousservice;
+        $service->noms_services = $request->servicepropose;
         $service->document = $document;
         $service->save();
         $identifient = $service->id;
@@ -58,7 +65,7 @@ class ServicesController extends Controller
         return back()->with('status','Ajout términé avec succées');
     }
 
-    function filtrationServices($prix_min,$prix_max,$titre,$dt,$localisation,$age) {
+    function filtrationServices($prix_min,$prix_max,$titre,$dt,$localisation) {
 
         $filters = [
             'prix_min'    => $prix_min,
@@ -66,11 +73,9 @@ class ServicesController extends Controller
             'titre'    => $titre,
             'dt' => $dt,
             'localisation'    => $localisation,
-            'age'=> $age,
         ];
       $res = Services::where(function ($query) use ($filters) {
         if ($filters['prix_min']!='all') {
-
             $query->where('salaire_min', '>', $filters['prix_min']-1);
         }
 
@@ -96,13 +101,6 @@ class ServicesController extends Controller
 
         }
 
-          if ($filters['age']!='all') {
-
-
-              $query->where('age', '=', $filters['age']);
-
-
-          }
         })->get();
 
 
@@ -111,11 +109,26 @@ class ServicesController extends Controller
 
 
     public function ShowDetailService($id){
-$service=Services::where('id',$id)->firstOrfail();
-
-        return view ('ShowDetailService')->with('service',$service);
+        $service = Services::find($id);
+        $detail=DetailsUsers::where('id_users',$service->id_user)->get();
+        return view ('ShowDetailService',compact('service','detail'));
 
     }
+
+    public function Detailfreelancer($id){
+        $service = Services::find($id);
+        $detail=DetailsUsers::where('id_users',$id)->firstOrfail();
+        return view ('Detailfreelancer',compact('service','detail'));
+
+    }
+
+    public function Sousservices($id){
+        $sousservices=sousservices::where('id_service',$id)->get();
+        return $sousservices;
+
+    }
+
+
 
 
 }
