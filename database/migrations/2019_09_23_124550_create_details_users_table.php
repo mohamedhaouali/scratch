@@ -27,7 +27,7 @@ class CreateDetailsUsersTable extends Migration
             $table->string('typeinfluencer')->nullable();
             $table->string('urlfb')->nullable();
             $table->string('urlinstagram')->nullable();
-            $table->string('presentation')->nullable();
+            $table->text('presentation')->nullable();
             $table->timestamps();
         });
     }

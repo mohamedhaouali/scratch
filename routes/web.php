@@ -16,7 +16,7 @@
 Route::get('/acceuil', 'client@accueilForm');
 Route::get('/profil','client@profilUserForm' )->name('profil')->middleware('App\Http\Middleware\Auth');
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/messagerie', 'HomeController@index')->name('home');
 Route::get('/auth/redirect/{provider}', 'Auth\LoginController@redirect');
 Route::get('/callback/{provider}', 'Auth\LoginController@callback');
 Route::get('sendgmail58', 'SendGmailController@sendgmail58');
@@ -30,11 +30,15 @@ Route::post('modifierprofilaction','client@modifierprofilaction')->name('modifie
 
 Route::get('AjouterServicesForm','ServicesController@AjouterServicesForm')->name('AjouterServicesForm');
 Route::post('AjouterServicesAction','ServicesController@AjouterServicesAction')->name('AjouterServicesAction');
-Route::get('rechercheview','ServicesController@viewrecherche')->name('rechercheview')->middleware('App\Http\Middleware\Auth');;
+Route::get('rechercheview','ServicesController@viewrecherche')->name('rechercheview')->middleware('App\Http\Middleware\Auth');
 Route::get('afficher','ServicesController@afficher')->name('afficher');
 Route::get('/ser/{prix_min}/{prix_max}/{titre}/{dt}/{localisation}','ServicesController@filtrationServices')->name('ser');
 Route::get('Sousservices/{id}','ServicesController@Sousservices')->name('Sousservices');
 Route::get('/','ServicesController@index')->name('/');
+Route::get('ServiceUser,{id}','ServicesController@ServiceUser')->name('ServiceUser');
+Route::get('EditServicesForm,{id}', 'ServicesController@EditServicesForm')->name('EditServicesForm');
+Route::post('EditServicesAction', 'ServicesController@EditServicesAction')->name('EditServicesAction');
+Route::get('DeleteServicesAction/{id}','ServicesController@DeleteServicesAction')->name('DeleteServicesAction');
 
 
 /****linkedin*****/

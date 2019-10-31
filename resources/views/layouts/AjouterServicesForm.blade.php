@@ -50,25 +50,14 @@
 						<div class="content with-padding padding-bottom-10">
 							<div class="row">
 
-								<div class="col-xl-3">
+								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Titre</h5>
 										<input type="text" class="with-border" name="titre">
 									</div>
 								</div>
 
-								<div class="col-xl-3">
-									<div class="submit-field">
-										<h5>Type de l'offre</h5>
-                                        <select class="selectpicker with-border" data-size="7" title="Type de l'offre" name="type">
-											<option>Facebook</option>
-											<option>Instagram</option>
-											<option>Les Deux</option>
-										</select>
-									</div>
-								</div>
-
-                                <div class="col-xl-3">
+                                <div class="col-xl-4">
                                     <div class="submit-field">
                                         <h5>Type du service </h5>
                                         <select class="selectpicker with-border" data-size="7" title="Type du service" name="servicepropose" onchange="list_sousservice(this.value)">

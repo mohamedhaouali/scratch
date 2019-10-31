@@ -44,7 +44,7 @@ class ServicesController extends Controller
         $service = new Services;
         $service->user_id = Auth::user()->id;
         $service->titre = $request->titre;
-        $service->type = $request->type;
+        $service->type = null;
         $service->localisation = $request->localisation;
         $service->salaire_min = $request->salaire_min;
         $service->salaire_max = $request->salaire_max;
@@ -110,7 +110,7 @@ class ServicesController extends Controller
 
     public function ShowDetailService($id){
         $service = Services::find($id);
-        $detail=DetailsUsers::where('id_users',$service->id_user)->get();
+        $detail=DetailsUsers::where('id_users',$service->user_id)->get();
         return view ('ShowDetailService',compact('service','detail'));
 
     }
@@ -127,6 +127,55 @@ class ServicesController extends Controller
         return $sousservices;
 
     }
+
+    public function ServiceUser($id){
+
+        $service=Services::where('user_id', $id)->OrderBy('created_at','DESC')->paginate(4);
+        $DetailsUser=DetailsUsers::where('id_users',$id)->get();
+        return view('layouts/ServiceUser',compact('service','DetailsUser'));
+    }
+
+    public function EditServicesForm($id){
+
+        $service=Services::where('id', $id)->get();
+        $servicepropose = servicesproposes::all();
+        foreach ( $service as $service){
+            $sousservice = sousservices::where('id_service', $service->noms_services)->get();
+        }
+        return view ('EditServicesForm', compact('service','servicepropose','sousservice'));
+
+
+    }
+
+    public function EditServicesAction(Request $request){
+
+
+        $service=Services::find($request->id);
+
+        $service->titre=$request->titre;
+        $service->type=null;
+        $service->localisation=$request->localisation;
+        $service->sous_services=$request->sous_services;
+        $service->noms_services=$request->noms_services;
+        $service->description=$request->description;
+        $service->salaire_min=$request->salaire_min;
+        $service->salaire_max=$request->salaire_max;
+        $service->save();
+        return back()
+            ->with('status','Service modifié avec succés');
+
+    }
+
+    public function DeleteServicesAction($id){
+
+
+        Services::destroy($id);
+        return back()
+            ->with('status','Service supprimé avec succés');
+
+    }
+
+
 
 
 

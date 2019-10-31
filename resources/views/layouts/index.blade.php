@@ -89,120 +89,7 @@
 <!-- Content
 ================================================== -->
 <!-- Category Boxes -->
-<div class="section margin-top-65">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
 
-                <div class="section-headline centered margin-bottom-15">
-                    <h3>Popular Job Categories</h3>
-                </div>
-
-                <!-- Category Boxes Container -->
-                <div class="categories-container">
-
-                    <!-- Category Box -->
-                    <a href="jobs-grid-layout-full-page.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-file-code-o"></i>
-                        </div>
-                        <div class="category-box-counter">612</div>
-                        <div class="category-box-content">
-                            <h3>Web & Software Dev</h3>
-                            <p>Software Engineer, Web / Mobile Developer & More</p>
-                        </div>
-                    </a>
-
-                    <!-- Category Box -->
-                    <a href="jobs-list-layout-full-page-map.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-cloud-upload"></i>
-                        </div>
-                        <div class="category-box-counter">113</div>
-                        <div class="category-box-content">
-                            <h3>Data Science & Analitycs</h3>
-                            <p>Data Specialist / Scientist, Data Analyst & More</p>
-                        </div>
-                    </a>
-
-                    <!-- Category Box -->
-                    <a href="jobs-list-layout-full-page-map.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-suitcase"></i>
-                        </div>
-                        <div class="category-box-counter">186</div>
-                        <div class="category-box-content">
-                            <h3>Accounting & Consulting</h3>
-                            <p>Auditor, Accountant, Fnancial Analyst & More</p>
-                        </div>
-                    </a>
-
-                    <!-- Category Box -->
-                    <a href="jobs-list-layout-1.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-pencil"></i>
-                        </div>
-                        <div class="category-box-counter">298</div>
-                        <div class="category-box-content">
-                            <h3>Writing & Translations</h3>
-                            <p>Copywriter, Creative Writer, Translator & More</p>
-                        </div>
-                    </a>
-
-                    <!-- Category Box -->
-                    <a href="jobs-list-layout-2.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-pie-chart"></i>
-                        </div>
-                        <div class="category-box-counter">549</div>
-                        <div class="category-box-content">
-                            <h3>Sales & Marketing</h3>
-                            <p>Brand Manager, Marketing Coordinator & More</p>
-                        </div>
-                    </a>
-
-                    <!-- Category Box -->
-                    <a href="jobs-list-layout-1.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-image"></i>
-                        </div>
-                        <div class="category-box-counter">873</div>
-                        <div class="category-box-content">
-                            <h3>Graphics & Design</h3>
-                            <p>Creative Director, Web Designer & More</p>
-                        </div>
-                    </a>
-
-                    <!-- Category Box -->
-                    <a href="jobs-list-layout-2.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-bullhorn"></i>
-                        </div>
-                        <div class="category-box-counter">125</div>
-                        <div class="category-box-content">
-                            <h3>Digital Marketing</h3>
-                            <p>Darketing Analyst, Social Profile Admin & More</p>
-                        </div>
-                    </a>
-
-                    <!-- Category Box -->
-                    <a href="jobs-grid-layout-full-page.html" class="category-box">
-                        <div class="category-box-icon">
-                            <i class="icon-line-awesome-graduation-cap"></i>
-                        </div>
-                        <div class="category-box-counter">445</div>
-                        <div class="category-box-content">
-                            <h3>Education & Training</h3>
-                            <p>Advisor, Coach, Education Coordinator & More</p>
-                        </div>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Category Boxes / End -->
 
 
@@ -215,6 +102,9 @@
                 <!-- Section Headline -->
                 <div class="section-headline margin-top-0 margin-bottom-35">
                     <h3>Liste des offres</h3>
+                    <a href="{{route('rechercheview')}}" class="headline-link">Tous les offres</a>
+
+
                 </div>
 
                 <!-- Jobs Container -->
@@ -304,60 +194,7 @@
 
 
 <!-- Features Cities -->
-<div class="section margin-top-65 margin-bottom-65">
-    <div class="container">
-        <div class="row">
 
-            <!-- Section Headline -->
-            <div class="col-xl-12">
-                <div class="section-headline centered margin-top-0 margin-bottom-45">
-                    <h3>Featured Cities</h3>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-md-6">
-                <!-- Photo Box -->
-                <a href="jobs-list-layout-1.html" class="photo-box" data-background-image="images/featured-city-01.jpg">
-                    <div class="photo-box-content">
-                        <h3>San Francisco</h3>
-                        <span>376 Jobs</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-xl-3 col-md-6">
-                <!-- Photo Box -->
-                <a href="jobs-list-layout-full-page-map.html" class="photo-box" data-background-image="images/featured-city-02.jpg">
-                    <div class="photo-box-content">
-                        <h3>New York</h3>
-                        <span>645 Jobs</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-xl-3 col-md-6">
-                <!-- Photo Box -->
-                <a href="jobs-grid-layout-full-page.html" class="photo-box" data-background-image="images/featured-city-03.jpg">
-                    <div class="photo-box-content">
-                        <h3>Los Angeles</h3>
-                        <span>832 Jobs</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-xl-3 col-md-6">
-                <!-- Photo Box -->
-                <a href="jobs-list-layout-2.html" class="photo-box" data-background-image="images/featured-city-04.jpg">
-                    <div class="photo-box-content">
-                        <h3>Miami</h3>
-                        <span>513 Jobs</span>
-                    </div>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</div>
 <!-- Features Cities / End -->
 
 <!-- Highest Rated Freelancers -->
@@ -417,7 +254,7 @@
                                 </ul>
                             </div>
 
-                         <center>   <button type="button" data-toggle="modal" data-backdrop="false" data-target="#infos<?php echo $i;?>" class="button button-sliding-icon ripple-effect"><i class="icon-material-outline-arrow-right-alt"></i></a>View Profile</button></center>
+                         <center>   <button type="button" data-toggle="modal" data-backdrop="false" data-target="#infos<?php echo $i;?>" class="button button-sliding-icon ripple-effect"><i class="icon-material-outline-arrow-right-alt"></i></a>Détail</button></center>
                             <div class="modal fade" id="infos<?php echo $i;?>">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -455,94 +292,7 @@
 
 
 <!-- Membership Plans -->
-<div class="section padding-top-60 padding-bottom-75">
-    <div class="container">
-        <div class="row">
 
-            <div class="col-xl-12">
-                <!-- Section Headline -->
-                <div class="section-headline centered margin-top-0 margin-bottom-35">
-                    <h3>Membership Plans</h3>
-                </div>
-            </div>
-
-
-            <div class="col-xl-12">
-
-                <!-- Billing Cycle  -->
-                <div class="billing-cycle-radios margin-bottom-70">
-                    <div class="radio billed-monthly-radio">
-                        <input id="radio-5" name="radio-payment-type" type="radio" checked>
-                        <label for="radio-5"><span class="radio-label"></span> Billed Monthly</label>
-                    </div>
-
-                    <div class="radio billed-yearly-radio">
-                        <input id="radio-6" name="radio-payment-type" type="radio">
-                        <label for="radio-6"><span class="radio-label"></span> Billed Yearly <span class="small-label">Save 10%</span></label>
-                    </div>
-                </div>
-
-                <!-- Pricing Plans Container -->
-                <div class="pricing-plans-container">
-
-                    <!-- Plan -->
-                    <div class="pricing-plan">
-                        <h3>Basic Plan</h3>
-                        <p class="margin-top-10">One time fee for one listing or task highlighted in search results.</p>
-                        <div class="pricing-plan-label billed-monthly-label"><strong>$19</strong>/ monthly</div>
-                        <div class="pricing-plan-label billed-yearly-label"><strong>$205</strong>/ yearly</div>
-                        <div class="pricing-plan-features">
-                            <strong>Features of Basic Plan</strong>
-                            <ul>
-                                <li>1 Listing</li>
-                                <li>30 Days Visibility</li>
-                                <li>Highlighted in Search Results</li>
-                            </ul>
-                        </div>
-                        <a href="pages-checkout-page.html" class="button full-width margin-top-20">Buy Now</a>
-                    </div>
-
-                    <!-- Plan -->
-                    <div class="pricing-plan recommended">
-                        <div class="recommended-badge">Recommended</div>
-                        <h3>Standard Plan</h3>
-                        <p class="margin-top-10">One time fee for one listing or task highlighted in search results.</p>
-                        <div class="pricing-plan-label billed-monthly-label"><strong>$49</strong>/ monthly</div>
-                        <div class="pricing-plan-label billed-yearly-label"><strong>$529</strong>/ yearly</div>
-                        <div class="pricing-plan-features">
-                            <strong>Features of Standard Plan</strong>
-                            <ul>
-                                <li>5 Listings</li>
-                                <li>60 Days Visibility</li>
-                                <li>Highlighted in Search Results</li>
-                            </ul>
-                        </div>
-                        <a href="pages-checkout-page.html" class="button full-width margin-top-20">Buy Now</a>
-                    </div>
-
-                    <!-- Plan -->
-                    <div class="pricing-plan">
-                        <h3>Extended Plan</h3>
-                        <p class="margin-top-10">One time fee for one listing or task highlighted in search results.</p>
-                        <div class="pricing-plan-label billed-monthly-label"><strong>$99</strong>/ monthly</div>
-                        <div class="pricing-plan-label billed-yearly-label"><strong>$1069</strong>/ yearly</div>
-                        <div class="pricing-plan-features">
-                            <strong>Features of Extended Plan</strong>
-                            <ul>
-                                <li>Unlimited Listings Listing</li>
-                                <li>90 Days Visibility</li>
-                                <li>Highlighted in Search Results</li>
-                            </ul>
-                        </div>
-                        <a href="pages-checkout-page.html" class="button full-width margin-top-20">Buy Now</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</div>
 <!-- Membership Plans / End-->
 
 <!-- Footer

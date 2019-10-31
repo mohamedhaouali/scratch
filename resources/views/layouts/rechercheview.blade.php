@@ -252,304 +252,304 @@
         </div>
         <!-- Header / End -->
 
-</header>
-@endguest
-<div class="clearfix"></div>
-<!-- Header Container / End -->
+    </header>
+    @endguest
+    <div class="clearfix"></div>
+    <!-- Header Container / End -->
 
-<!-- Spacer -->
-<div class="margin-top-90"></div>
-<!-- Spacer / End-->
+    <!-- Spacer -->
+    <div class="margin-top-90"></div>
+    <!-- Spacer / End-->
 
-<!-- Page Content
-================================================== -->
-<div class="container">
-    <div class="row">
-        <div class="col-xl-3 col-lg-4">
-            <div class="sidebar-container">
-                <form method="get" action="{{route('afficher')}}">
-                    <!-- Location -->
-                    <div class="sidebar-widget">
-                        <h3>Localisation</h3>
-                        <div class="input-with-icon">
-                            <div id="autocomplete-container">
-                                <input id="localisation" type="text" placeholder="Location" name="localisation">
-                            </div>
-                            <i class="icon-material-outline-location-on"></i>
-                        </div>
-                    </div>
-
-                    <!-- Category -->
-                    <div class="sidebar-widget">
-                        <h3>Catégorie</h3>
-                        <select id="titre" name="titre" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
-                            @foreach(App\Services::all() as $service)
-                                <option value="{{$service->titre}}">{{$service->titre}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <!-- Keywords -->
-                    <div class="sidebar-widget">
-                        <h3>Date</h3>
-                        <div class="keywords-container">
-                            <div class="keyword-input-container">
-                                <input id="date" name="date" type="date" class="form-control"/>
-
-                            </div>
-                            <div class="keywords-list"><!-- keywords go here --></div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-
-                    <!-- Hourly Rate -->
-                    <div class="sidebar-widget">
-                        <h3>Prix</h3>
-                        <div class="margin-top-55"></div>
-
-                        <!-- Range Slider -->
-                        <input id="prix" name="prix" class="range-slider" type="text" value="" data-slider-currency="$" data-slider-min="{{App\Services::min('salaire_min')}}" data-slider-max="{{App\Services::max('salaire_max')}}" data-slider-step="5" data-slider-value="[{{App\Services::min('salaire_min')}},{{App\Services::max('salaire_max')}}]"/>
-                    </div>
-
-                    <!-- Tags -->
-
-                    <div class="clearfix"></div>
-
-            </div>
-        </div>
-        <div class="col-xl-9 col-lg-8 content-left-offset">
-
-            <h3 class="page-title">Résultats de recherche</h3>
-
-
-
-            <!-- Freelancers List Container -->
-            <div id="resultat" class="freelancers-container freelancers-list-layout compact-list margin-top-35">
-            <?php $i=0;?>
-            @foreach($all as $serv)
-
-                <!--Freelancer -->
-                    <div class="freelancer">
-
-                        <!-- Overview -->
-                        <div class="freelancer-overview">
-                            <div class="freelancer-overview-inner">
-
-                                <!-- Bookmark Icon -->
-                                <span class="bookmark-icon"></span>
-
-                                <!-- Avatar -->
-                                <div class="freelancer-avatar">
-                                    <div class="verified-badge"></div>
-                                    <a href="single-freelancer-profile.html"><img src="images/user-avatar-big-01.jpg" alt=""></a>
+    <!-- Page Content
+    ================================================== -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4">
+                <div class="sidebar-container">
+                    <form method="get" action="{{route('afficher')}}">
+                        <!-- Location -->
+                        <div class="sidebar-widget">
+                            <h3>Localisation</h3>
+                            <div class="input-with-icon">
+                                <div id="autocomplete-container">
+                                    <input id="localisation" type="text" placeholder="Location" name="localisation">
                                 </div>
+                                <i class="icon-material-outline-location-on"></i>
+                            </div>
+                        </div>
 
-                                <!-- Name -->
+                        <!-- Category -->
+                        <div class="sidebar-widget">
+                            <h3>Catégorie</h3>
+                            <select id="titre" name="titre" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
+                                @foreach(App\Services::all() as $service)
+                                    <option value="{{$service->titre}}">{{$service->titre}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <!-- Keywords -->
+                        <div class="sidebar-widget">
+                            <h3>Date</h3>
+                            <div class="keywords-container">
+                                <div class="keyword-input-container">
+                                    <input id="date" name="date" type="date" class="form-control"/>
+
+                                </div>
+                                <div class="keywords-list"><!-- keywords go here --></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <!-- Hourly Rate -->
+                        <div class="sidebar-widget">
+                            <h3>Prix</h3>
+                            <div class="margin-top-55"></div>
+
+                            <!-- Range Slider -->
+                            <input id="prix" name="prix" class="range-slider" type="text" value="" data-slider-currency="$" data-slider-min="{{App\Services::min('salaire_min')}}" data-slider-max="{{App\Services::max('salaire_max')}}" data-slider-step="5" data-slider-value="[{{App\Services::min('salaire_min')}},{{App\Services::max('salaire_max')}}]"/>
+                        </div>
+
+                        <!-- Tags -->
+
+                        <div class="clearfix"></div>
+
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-8 content-left-offset">
+
+                <h3 class="page-title">Résultats de recherche</h3>
 
 
-                                <div class="freelancer-name">
-                                    <h4><a href="#"> {{App\User::find($serv->id_user)->name}}  </a></h4>
 
-                                    <span>developpeur</span>
-                                    <!-- Rating -->
-                                    <div class="freelancer-rating">
-                                        <div class="star-rating" data-rating="4.9"></div>
+                <!-- Freelancers List Container -->
+                <div id="resultat" class="freelancers-container freelancers-list-layout compact-list margin-top-35">
+                <?php $i=0;?>
+                @foreach($all as $serv)
+
+                    <!--Freelancer -->
+                        <div class="freelancer">
+
+                            <!-- Overview -->
+                            <div class="freelancer-overview">
+                                <div class="freelancer-overview-inner">
+
+                                    <!-- Bookmark Icon -->
+                                    <span class="bookmark-icon"></span>
+
+                                    <!-- Avatar -->
+                                    <div class="freelancer-avatar">
+                                        <div class="verified-badge"></div>
+                                        <a href="single-freelancer-profile.html"><img src="images/user-avatar-big-01.jpg" alt=""></a>
                                     </div>
+
+                                    <!-- Name -->
+
+
+                                    <div class="freelancer-name">
+                                        <h4><a href="#"> {{App\User::find($serv->user_id)->name}}  </a></h4>
+
+                                        <span>developpeur</span>
+                                        <!-- Rating -->
+                                        <div class="freelancer-rating">
+                                            <div class="star-rating" data-rating="4.9"></div>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                             </div>
 
-                        </div>
-
-                        <!-- Details -->
-                        <div class="freelancer-details">
-                            <div class="freelancer-details-list">
-                                <ul>
-                                    <li>Location <strong><i class="icon-material-outline-location-on"></i> {{$serv->localisation}}</strong></li>
-                                    <li>Type d'inflence <strong>{{$serv->type}}</strong></li>
-                                    <li>Titre service <strong>{{$serv->titre}}</strong></li>
-                                </ul>
+                            <!-- Details -->
+                            <div class="freelancer-details">
+                                <div class="freelancer-details-list">
+                                    <ul>
+                                        <li>Location <strong><i class="icon-material-outline-location-on"></i> {{$serv->localisation}}</strong></li>
+                                        <li>Type d'inflence <strong>{{$serv->type}}</strong></li>
+                                        <li>Titre service <strong>{{$serv->titre}}</strong></li>
+                                    </ul>
+                                </div>
+                                <a href="{{route('Detailfreelancer',['id'=>$serv->id])}}" class="button button-sliding-icon ripple-effect">View Profile <i class="icon-material-outline-arrow-right-alt"></i></a>
                             </div>
-                            <a href="{{route('Detailfreelancer',['id'=>$serv->id])}}" class="button button-sliding-icon ripple-effect">View Profile <i class="icon-material-outline-arrow-right-alt"></i></a>
+
                         </div>
-
-                    </div>
-                    <?php $i= $i+1;?>
-                @endforeach
+                        <?php $i= $i+1;?>
+                    @endforeach
 
 
 
-            </div>
+                </div>
 
-        {{$all->links()}}
+            {{$all->links()}}
 
 
             <!-- Pagination / End -->
 
+            </div>
+
         </div>
 
     </div>
 
-</div>
 
+    <!-- Footer
+    ================================================== -->
+    <div id="footer">
 
-<!-- Footer
-================================================== -->
-<div id="footer">
+        <!-- Footer Top Section -->
+        <div class="footer-top-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
 
-    <!-- Footer Top Section -->
-    <div class="footer-top-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
+                        <!-- Footer Rows Container -->
+                        <div class="footer-rows-container">
 
-                    <!-- Footer Rows Container -->
-                    <div class="footer-rows-container">
-
-                        <!-- Left Side -->
-                        <div class="footer-rows-left">
-                            <div class="footer-row">
-                                <div class="footer-row-inner footer-logo">
-                                    <img src="images/logo2.png" alt="">
+                            <!-- Left Side -->
+                            <div class="footer-rows-left">
+                                <div class="footer-row">
+                                    <div class="footer-row-inner footer-logo">
+                                        <img src="images/logo2.png" alt="">
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Right Side -->
+                            <div class="footer-rows-right">
+
+                                <!-- Social Icons -->
+                                <div class="footer-row">
+                                    <div class="footer-row-inner">
+                                        <ul class="footer-social-links">
+                                            <li>
+                                                <a href="#" title="Facebook" data-tippy-placement="bottom" data-tippy-theme="light">
+                                                    <i class="icon-brand-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Twitter" data-tippy-placement="bottom" data-tippy-theme="light">
+                                                    <i class="icon-brand-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Google Plus" data-tippy-placement="bottom" data-tippy-theme="light">
+                                                    <i class="icon-brand-google-plus-g"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="LinkedIn" data-tippy-placement="bottom" data-tippy-theme="light">
+                                                    <i class="icon-brand-linkedin-in"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Language Switcher -->
+                                <div class="footer-row">
+                                    <div class="footer-row-inner">
+                                        <select class="selectpicker language-switcher" data-selected-text-format="count" data-size="5">
+                                            <option selected>English</option>
+                                            <option>Français</option>
+                                            <option>Español</option>
+                                            <option>Deutsch</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                        <!-- Footer Rows Container / End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Top Section / End -->
 
-                        <!-- Right Side -->
-                        <div class="footer-rows-right">
+        <!-- Footer Middle Section -->
+        <div class="footer-middle-section">
+            <div class="container">
+                <div class="row">
 
-                            <!-- Social Icons -->
-                            <div class="footer-row">
-                                <div class="footer-row-inner">
-                                    <ul class="footer-social-links">
-                                        <li>
-                                            <a href="#" title="Facebook" data-tippy-placement="bottom" data-tippy-theme="light">
-                                                <i class="icon-brand-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Twitter" data-tippy-placement="bottom" data-tippy-theme="light">
-                                                <i class="icon-brand-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Google Plus" data-tippy-placement="bottom" data-tippy-theme="light">
-                                                <i class="icon-brand-google-plus-g"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="LinkedIn" data-tippy-placement="bottom" data-tippy-theme="light">
-                                                <i class="icon-brand-linkedin-in"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-
-                            <!-- Language Switcher -->
-                            <div class="footer-row">
-                                <div class="footer-row-inner">
-                                    <select class="selectpicker language-switcher" data-selected-text-format="count" data-size="5">
-                                        <option selected>English</option>
-                                        <option>Français</option>
-                                        <option>Español</option>
-                                        <option>Deutsch</option>
-                                    </select>
-                                </div>
-                            </div>
+                    <!-- Links -->
+                    <div class="col-xl-2 col-lg-2 col-md-3">
+                        <div class="footer-links">
+                            <h3>For Candidates</h3>
+                            <ul>
+                                <li><a href="#"><span>Browse Jobs</span></a></li>
+                                <li><a href="#"><span>Add Resume</span></a></li>
+                                <li><a href="#"><span>Job Alerts</span></a></li>
+                                <li><a href="#"><span>My Bookmarks</span></a></li>
+                            </ul>
                         </div>
-
                     </div>
-                    <!-- Footer Rows Container / End -->
+
+                    <!-- Links -->
+                    <div class="col-xl-2 col-lg-2 col-md-3">
+                        <div class="footer-links">
+                            <h3>For Employers</h3>
+                            <ul>
+                                <li><a href="#"><span>Browse Candidates</span></a></li>
+                                <li><a href="#"><span>Post a Job</span></a></li>
+                                <li><a href="#"><span>Post a Task</span></a></li>
+                                <li><a href="#"><span>Plans & Pricing</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="col-xl-2 col-lg-2 col-md-3">
+                        <div class="footer-links">
+                            <h3>Helpful Links</h3>
+                            <ul>
+                                <li><a href="#"><span>Contact</span></a></li>
+                                <li><a href="#"><span>Privacy Policy</span></a></li>
+                                <li><a href="#"><span>Terms of Use</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="col-xl-2 col-lg-2 col-md-3">
+                        <div class="footer-links">
+                            <h3>Account</h3>
+                            <ul>
+                                <li><a href="#"><span>Log In</span></a></li>
+                                <li><a href="#"><span>My Account</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <h3><i class="icon-feather-mail"></i> Sign Up For a Newsletter</h3>
+                        <p>Weekly breaking news, analysis and cutting edge advices on job searching.</p>
+                        <form action="#" method="get" class="newsletter">
+                            <input type="text" name="fname" placeholder="Enter your email address">
+                            <button type="submit"><i class="icon-feather-arrow-right"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer Top Section / End -->
+        <!-- Footer Middle Section / End -->
 
-    <!-- Footer Middle Section -->
-    <div class="footer-middle-section">
-        <div class="container">
-            <div class="row">
-
-                <!-- Links -->
-                <div class="col-xl-2 col-lg-2 col-md-3">
-                    <div class="footer-links">
-                        <h3>For Candidates</h3>
-                        <ul>
-                            <li><a href="#"><span>Browse Jobs</span></a></li>
-                            <li><a href="#"><span>Add Resume</span></a></li>
-                            <li><a href="#"><span>Job Alerts</span></a></li>
-                            <li><a href="#"><span>My Bookmarks</span></a></li>
-                        </ul>
+        <!-- Footer Copyrights -->
+        <div class="footer-bottom-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        © 2019 <strong>Hireo</strong>. All Rights Reserved.
                     </div>
-                </div>
-
-                <!-- Links -->
-                <div class="col-xl-2 col-lg-2 col-md-3">
-                    <div class="footer-links">
-                        <h3>For Employers</h3>
-                        <ul>
-                            <li><a href="#"><span>Browse Candidates</span></a></li>
-                            <li><a href="#"><span>Post a Job</span></a></li>
-                            <li><a href="#"><span>Post a Task</span></a></li>
-                            <li><a href="#"><span>Plans & Pricing</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Links -->
-                <div class="col-xl-2 col-lg-2 col-md-3">
-                    <div class="footer-links">
-                        <h3>Helpful Links</h3>
-                        <ul>
-                            <li><a href="#"><span>Contact</span></a></li>
-                            <li><a href="#"><span>Privacy Policy</span></a></li>
-                            <li><a href="#"><span>Terms of Use</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Links -->
-                <div class="col-xl-2 col-lg-2 col-md-3">
-                    <div class="footer-links">
-                        <h3>Account</h3>
-                        <ul>
-                            <li><a href="#"><span>Log In</span></a></li>
-                            <li><a href="#"><span>My Account</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <h3><i class="icon-feather-mail"></i> Sign Up For a Newsletter</h3>
-                    <p>Weekly breaking news, analysis and cutting edge advices on job searching.</p>
-                    <form action="#" method="get" class="newsletter">
-                        <input type="text" name="fname" placeholder="Enter your email address">
-                        <button type="submit"><i class="icon-feather-arrow-right"></i></button>
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer Middle Section / End -->
+        <!-- Footer Copyrights / End -->
 
-    <!-- Footer Copyrights -->
-    <div class="footer-bottom-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    © 2019 <strong>Hireo</strong>. All Rights Reserved.
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- Footer Copyrights / End -->
-
-</div>
-<!-- Footer / End -->
+    <!-- Footer / End -->
 
 </div>
 <!-- Wrapper / End -->
@@ -666,7 +666,7 @@
             var x= 1;
             //document.getElementById("resultat").innerHTML = document.getElementById('prix').value;
 
-            $.get('http://localhost/scratch/public/ser/'+prix_min+'/'+prix_max+'/'+titre+'/'+dt+'/'+localisation)
+            $.get('http://localhost:84/scratch/public/ser/'+prix_min+'/'+prix_max+'/'+titre+'/'+dt+'/'+localisation)
                 .done(function(response) {
                     var html="";
                     $.each(response, function(i, item) {
@@ -704,7 +704,7 @@
             var x= 1;
             //document.getElementById("resultat").innerHTML = document.getElementById('prix').value;
 
-            $.get('http://localhost/scratch/public/ser/'+prix_min+'/'+prix_max+'/'+titre+'/'+dt+'/'+localisation)
+            $.get('http://localhost:84/scratch/public/ser/'+prix_min+'/'+prix_max+'/'+titre+'/'+dt+'/'+localisation)
                 .done(function(response) {
                     var html="";
                     $.each(response, function(i, item) {
@@ -739,14 +739,14 @@
                 localisation = "all";
             }
             var x= 1;
-         
+
             /*
-            Modifier 
+            Modifier
             http://localhost/smencer/
             par votre url
-            
+
             */
-            $.get('http://localhost/smencer/ser/'+prix_min+'/'+prix_max+'/'+titre+'/'+dt+'/'+localisation)
+            $.get('http://localhost:84/scratch/ser/'+prix_min+'/'+prix_max+'/'+titre+'/'+dt+'/'+localisation)
                 .done(function(response) {
                     var html="";
                     $.each(response, function(i, item) {

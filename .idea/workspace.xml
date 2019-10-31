@@ -2,151 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad40ea7-9e56-41d0-b623-3e4c972b40a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/NewCommentPosted.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/servicesproposes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/sousservices.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/installer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_17_093423_create_sousservices_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_17_143355_create_servicesproposes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_21_143256_create_messages_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_24_125401_create_comments_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_24_144011_create_notifications_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/111237_165668_69891185_2936727393063966_8140180056442929152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/128507_Monji-Slim-tof.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/140578_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/147265_images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/159589_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/182566_m1hamm111_lightslate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/263727_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/269304_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/299489_images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/305227_m1hamm111_lightslate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/307309_images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/316877_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/327712_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/355895_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/391448_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/449570_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/455931_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/490109_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/508664_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/51145_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/636757_m1hamm111_lightslate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/670685_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/682160_m1hamm111_lightslate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/72735_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/775210_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/796079_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/867680_images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/893215_profil.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/910002_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/923228_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/973287_images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Document/3543_helmi ayedi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Document/3786_med.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Document/9100_images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/sass/_variables.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/sass/style.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/font-awesome/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/css/style.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/fonts/ionicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/img/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/img/favicon/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/img/favicon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/img/favicon/favicon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/installer/img/pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/de/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/es/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/et/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/fa/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/fr/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/gr/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/id/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/it/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/nl/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pl/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt-br/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/pt/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ro/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ru/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/tr/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/zh-CN/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/zh-TW/installer_messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Detailfreelancer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/messages/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/environment-classic.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/environment-wizard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/environment.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/finished.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/layouts/master-update.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/permissions.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/requirements.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/update/finished.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/update/overview.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/update/welcome.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/vendor/installer/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scratch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scratch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/296055_Monji-Slim-tof.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/461248_helmi ayedi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/EditServicesForm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/ServiceUser.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DetailsUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DetailsUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServicesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_23_124550_create_details_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_23_124550_create_details_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_24_133326_create_services_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_24_133326_create_services_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ShowDetailService.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ShowDetailService.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Detailfreelancer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Detailfreelancer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/AjouterServicesForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/AjouterServicesForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/modifierprofil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/modifierprofil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/left.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/left.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/rechercheview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/rechercheview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/viewlogin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/viewlogin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,6 +29,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="scratch" />
@@ -267,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../coders" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -323,7 +207,15 @@
       <workItem from="1571998727216" duration="690000" />
       <workItem from="1571999422204" duration="1033000" />
       <workItem from="1572252367282" duration="2241000" />
-      <workItem from="1572257236080" duration="1851000" />
+      <workItem from="1572257236080" duration="2526000" />
+      <workItem from="1572274481770" duration="49000" />
+      <workItem from="1572333502227" duration="389000" />
+      <workItem from="1572353462939" duration="4506000" />
+      <workItem from="1572358172956" duration="5608000" />
+      <workItem from="1572418945971" duration="457000" />
+      <workItem from="1572419895344" duration="20792000" />
+      <workItem from="1572506786894" duration="52000" />
+      <workItem from="1572506839837" duration="1868000" />
     </task>
     <servers />
   </component>

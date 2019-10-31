@@ -114,7 +114,7 @@
 					<!-- Messages -->
 					<div class="header-notifications">
 						<div class="header-notifications-trigger">
-							<a href="#"><i class="icon-feather-mail"></i><span>3</span></a>
+							<a href="#"><i class="icon-feather-mail"></i></a>
 						</div>
 
 						<!-- Dropdown -->

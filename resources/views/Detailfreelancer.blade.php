@@ -50,22 +50,14 @@
 
                 <!-- Boxed List -->
                 <div class="boxed-list margin-bottom-60">
-                    <div class="boxed-list-headline">
-                        <h3><i class="icon-material-outline-thumb-up"></i> Work History and Feedback</h3>
-                    </div>
+
                     <ul class="boxed-list-ul">
                         <li>
                             <div class="boxed-list-item">
                                 <!-- Content -->
                                 <div class="item-content">
-                                    <h4>Web, Database and API Developer <span>Rated as Freelancer</span></h4>
-                                    <div class="item-details margin-top-10">
-                                        <div class="star-rating" data-rating="5.0"></div>
-                                        <div class="detail-item"><i class="icon-material-outline-date-range"></i> August 2019</div>
-                                    </div>
-                                    <div class="item-description">
-                                        <p>Excellent programmer - fully carried out my project in a very professional manner. </p>
-                                    </div>
+
+
                                 </div>
                             </div>
                         </li>
